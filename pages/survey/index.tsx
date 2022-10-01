@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
-import SurveyBoard from "../../components/Survey/TabContents/SurveyBoard";
-import MySurvey from "../../components/Survey/TabContents/MySurvey";
+import SurveyBoard from "../../components/pages/Survey/TabContents/SurveyBoard";
+import MySurvey from "../../components/pages/Survey/TabContents/MySurvey";
 
 const SurveyPage = styled.div`
   position: absolute;

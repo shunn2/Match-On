@@ -5,12 +5,12 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../components/api/API";
-import { StudyBox } from "../../components/myprojects/components/BoxContainer";
+import { StudyBox } from "../../components/pages/myprojects/components/BoxContainer";
 import Carousel, { SlideButton } from "../../components/sub/Carousel";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import qs from "qs";
-import UploadModal from "../../components/Study/Modal/UploadModal";
-import ResultRow from "../../components/Study/table/ResultRow";
+import UploadModal from "../../components/pages/Study/Modal/UploadModal";
+import ResultRow from "../../components/pages/Study/table/ResultRow";
 interface FavortieStudy {
   studyIdx: number;
   title: string;

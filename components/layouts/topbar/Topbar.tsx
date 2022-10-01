@@ -1,19 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 //signOut === 로그아웃 함수 useSession === nextauth에서 user가 로그인되어 있는 지를 알려주는 훅
-import DirectMsg from "../../components/sub/DirectMsg";
-import Notification from "../../components/sub/Notification";
+import DirectMsg from "../../sub/DirectMsg";
+import Notification from "../../sub/Notification";
 
 import styled from "@emotion/styled";
-import UserInfo from "../../components/sub/UserInfo";
+import UserInfo from "../../sub/UserInfo";
 
-import { useAppSelector } from "../../src/hooks/hooks";
+import { useAppSelector } from "../../../src/hooks/hooks";
 
-import MessageIcon from "../../public/topbarSVG/directmsg.svg";
-import NotificationIcon from "../../public/topbarSVG/notification.svg";
-import ImageContainer from "../../components/sub/ProfileImage";
-import { RootState } from "../../src/redux/store";
-import ProfileImage from "../../components/sub/ProfileImage";
+import MessageIcon from "/public/topbarSVG/directmsg.svg";
+import NotificationIcon from "/public/topbarSVG/notification.svg";
+import { RootState } from "../../../src/redux/store";
+import ProfileImage from "../../sub/ProfileImage";
 // import { getProfileImgUrl } from "../../components/sub/getProfileImg";
 
 const Top = styled.div`
@@ -37,17 +36,6 @@ const Container = styled.div`
   font-weight: 500;
   &:hover {
     font-weight: bold;
-  }
-`;
-
-const ProfileImg = styled.img`
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid black;
-  margin-left: 8px;
-  &:hover {
-    cursor: pointer;
   }
 `;
 
@@ -125,5 +113,5 @@ const Topbar: React.FC = () => {
     </>
   );
 };
-//https://cpro95.tistory.com/611
+
 export default Topbar;

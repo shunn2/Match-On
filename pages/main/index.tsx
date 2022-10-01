@@ -4,13 +4,13 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../components/api/API";
-import CalendarMain from "../../components/Main/CalendarMain";
-import FavoriteTeam from "../../components/Main/FavoriteTeam";
-import RecentAlarm from "../../components/Main/RecentAlarm";
+import CalendarMain from "../../components/pages/Main/CalendarMain";
+import FavoriteTeam from "../../components/pages/Main/FavoriteTeam";
+import RecentAlarm from "../../components/pages/Main/RecentAlarm";
 import {
   EmptyBox,
   MainProjectBox,
-} from "../../components/myprojects/components/BoxContainer";
+} from "../../components/pages/myprojects/components/BoxContainer";
 import { useAppSelector } from "../../src/hooks/hooks";
 import { RootState } from "../../src/redux/store";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import MatchOnLogo from "../../../public/MatchOnLogo.svg";
+import MatchOnLogo from "/public/MatchOnLogo.svg";
 
 const LogoFrame = styled.div`
   position: absolute;

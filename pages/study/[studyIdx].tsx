@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import { API_URL } from "../../components/api/API";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import PostContent from "../../components/Study/Post/PostContent";
+import PostContent from "../../components/pages/Study/Post/PostContent";
 
 const StudyPostPage = styled.div`
   position: absolute;

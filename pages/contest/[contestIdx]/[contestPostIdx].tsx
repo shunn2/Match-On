@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 
 import styled from "@emotion/styled";
 
-import Introduction from "../../../components/Contest/TabContents/Introduction";
-import Comments from "../../../components/Contest/TabContents/Comments";
-import RecruitContest from "../../../components/Contest/TabContents/RecruitContest";
-import PostContent from "../../../components/Contest/post/PostContent";
+import Introduction from "../../../components/pages/Contest/TabContents/Introduction";
+import Comments from "../../../components/pages/Contest/TabContents/Comments";
+import RecruitContest from "../../../components/pages/Contest/TabContents/RecruitContest";
+import PostContent from "../../../components/pages/Contest/post/PostContent";
 
 const MyprojectPage = styled.div`
   position: absolute;

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Provider } from "react-redux";
 import RefreshTokenHandler from "../components/sub/auth/refreshTokenHandler";
-import Layout from "../layouts/Layout";
+import Layout from "../components/layouts/Layout";
 import "../styles/globals.css";
 import { store } from "../src/redux/store";
 import { useState } from "react";

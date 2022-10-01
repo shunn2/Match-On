@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../components/api/API";
-import { ProjectBox } from "../../components/myprojects/components/BoxContainer";
+import { ProjectBox } from "../../components/pages/myprojects/components/BoxContainer";
 
 interface teamImfo {
   teamIdx: number;
