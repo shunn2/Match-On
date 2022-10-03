@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import ImageContainer from "../../components/sub/ProfileImage";
+import ImageContainer from "../../components/src/sub/ProfileImage";
 import { useAppSelector } from "../../src/hooks/hooks";
 import { RootState } from "../../src/redux/store";
 

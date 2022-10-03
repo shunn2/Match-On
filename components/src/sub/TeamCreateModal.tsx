@@ -1,14 +1,15 @@
 import Modal from "react-modal";
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 //1367 645
 import Close from "../../public/componentSVG/CloseButton.svg";
-import EditorForm from "./Editor";
 import axios from "axios";
-import { API_URL } from "../api/API";
+import { API_URL } from "../../api/API";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 import CustomCheck from "../../../../public/componentSVG/register/CustomCheck.svg";
+import { useRouter } from "next/router";
 
 const customStyles = {
   overlay: {
@@ -62,6 +63,9 @@ const CloseButton = styled.div`
 const Contents = styled.div`
   width: 100%;
   height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const UploadButton = styled.div<{ possible: boolean }>`
@@ -78,14 +82,14 @@ const UploadButton = styled.div<{ possible: boolean }>`
 
 const ContentInput = styled.input`
   width: 100%;
-  height: 2rem;
+  height: 2.3rem;
   border: 0.5px solid #aaaaaa;
   border-radius: 8px;
   padding-left: 10px;
   margin-bottom: 2%;
   border: 1px solid #f1f1f1;
   &:focus {
-    outline: none;
+    outline: 2px solid #47d2d2;
   }
   ::placeholder,
   ::-webkit-input-placeholder {
@@ -93,78 +97,90 @@ const ContentInput = styled.input`
   :-ms-input-placeholder {
   }
 `;
-const Description = styled.div`
-  font-size: 0.75rem;
+const ContentsRow = styled.div`
   width: 100%;
+  height: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: #aaaaaa;
-  .description_row {
-    margin: 0.3rem 0;
+  justify-content: space-evenly;
+  .row_title {
+    font-size: 0.75rem;
+    color: #aaaaaa;
+  }
+  .input_wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 `;
+const MemberWrapper = styled.div`
+  width: 100%;
+  height: 65%;
+  border: 1px solid black;
+`;
 
-const ResumeModal = ({ isOpen, handleOpen, postIdx, type }) => {
+const TeamCreateModal = ({ isOpen, handleOpen, member, type, index }) => {
   const { data: session, status } = useSession();
-  const [title, setTitle] = useState<string>("");
-  const [body, setBody] = useState<string>("");
+  const [teamName, setTeamName] = useState<string>("");
+  const router = useRouter();
 
-  const postResume = async () => {
-    if (type === "lecture") {
-      try {
-        const res = await axios.post(
-          API_URL + `lectures/posts/${postIdx}/resumes`,
-          {
-            body: body,
+  const createTeam = async () => {
+    try {
+      const res = await axios.post(
+        API_URL + `teams`,
+        {
+          name: teamName,
+          type: type,
+          members: member,
+          index: index,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${session.accessToken}`,
           },
-          {
-            headers: {
-              Authorization: `Bearer ${session.accessToken}`,
-            },
-          }
-        );
-      } catch (err) {
-        console.log(err);
+        }
+      );
+      if (res.data.code === 1000) {
+        router.push("/myproject");
+      } else {
+        alert("팀 생성에 실패하였습니다.");
       }
+    } catch (err) {
+      console.log(err);
     }
-    if (type === "study") {
-      try {
-        const res = await axios.post(
-          API_URL + `studies/${postIdx}/resumes`,
-          {
-            body: body,
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${session.accessToken}`,
-            },
-          }
-        );
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    handleOpen();
   };
+
   return (
     <StyledModal isOpen={isOpen} onRequesClose={handleOpen} ariaHideApp={false} style={customStyles}>
       <Header>
-        <Title>지원서 작성</Title>
+        <Title>팀 생성</Title>
         <CloseButton onClick={handleOpen}>
           <Close />
         </CloseButton>
       </Header>
       <Contents>
-        <EditorForm setBody={setBody} data={""} clickable={false} />
+        <ContentsRow>
+          <ContentInput
+            onChange={(e) => setTeamName(e.target.value)}
+            placeholder="팀 이름을 입력하세요. (추후 변경 가능)"
+          />
+        </ContentsRow>
+        <ContentsRow>
+          <span className="row_title">사용자 초대하기</span>
+          <div className="input_wrapper">
+            <ContentInput style={{ width: "calc(100% - 6rem)" }} placeholder="사용자 이메일 입력"></ContentInput>
+            <UploadButton style={{ width: "5rem", height: "2.3rem" }} possible={true}>
+              등록
+            </UploadButton>
+          </div>
+        </ContentsRow>
+        <MemberWrapper>
+          {member.map((userIdx, idx) => (
+            <div key={idx}>{userIdx}</div>
+          ))}
+        </MemberWrapper>
       </Contents>
-      <Description>
-        <div className="description_row">이미 작성 완료한 지원서는 수정/취소 할 수 없습니다.</div>
-        <div className="description_row">작성자가 팀으로 초대하면 알림이 갑니다.</div>
-        <div className="description_row">팀원으로 참여를 확인하시면 팀 페이지로 자동 초대 됩니다.</div>
-      </Description>
       <div className="bottom">
-        <UploadButton onClick={body.length !== 8 ? postResume : undefined} possible={body.length > 7}>
+        <UploadButton onClick={createTeam} possible={teamName.length > 0}>
           등록
         </UploadButton>
       </div>
@@ -172,4 +188,4 @@ const ResumeModal = ({ isOpen, handleOpen, postIdx, type }) => {
   );
 };
 
-export default ResumeModal;
+export default TeamCreateModal;

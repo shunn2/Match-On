@@ -5,8 +5,8 @@ import React from "react";
 
 import Setting from "../../public/topbarSVG/AccountSetting.svg";
 import LogOut from "../../public/topbarSVG/LogOut.svg";
-import { useAppSelector } from "../../src/hooks/hooks";
-import { RootState } from "../../src/redux/store";
+import { useAppSelector } from "../../../src/hooks/hooks";
+import { RootState } from "../../../src/redux/store";
 import ProfileImage from "./ProfileImage";
 interface UserInformation {
   accessedAt: string;

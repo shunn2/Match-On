@@ -6,7 +6,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../components/api/API";
 import { StudyBox } from "../../components/pages/myprojects/components/BoxContainer";
-import Carousel, { SlideButton } from "../../components/sub/Carousel";
+import Carousel, { SlideButton } from "../../components/src/sub/Carousel";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import qs from "qs";
 import UploadModal from "../../components/pages/Study/Modal/UploadModal";
