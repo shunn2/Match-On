@@ -2,7 +2,7 @@ import { SessionProvider, signOut, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Provider } from "react-redux";
-import RefreshTokenHandler from "../src/components/sub/auth/refreshTokenHandler";
+import RefreshTokenHandler from "../src/auth/refreshTokenHandler";
 import Layout from "../src/components/layouts/Layout";
 import "../styles/globals.css";
 import { store } from "../src/redux/store";
@@ -11,13 +11,10 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { useAppDispatch } from "../src/hooks/hooks";
 import { userLogin } from "../src/redux/reducers/user";
 import axios from "axios";
-import { API_URL } from "../src/api/API";
+import { API_URL } from "src/api/API";
+import { AppProps } from "next/app";
 
-export default function App({
-  Component,
-  data,
-  pageProps: { session, ...pageProps },
-}) {
+const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
   const queryClient = new QueryClient();
 
   const [interval, setInterval] = useState(0);
@@ -42,9 +39,9 @@ export default function App({
       </QueryClientProvider>
     </Provider>
   );
-}
+};
 
-const Auth = ({ children }) => {
+const Auth = ({ children }: { children: JSX.Element }) => {
   const { data: session, status } = useSession();
   const loading = status === "loading";
   const hasUser = !!session?.user;
@@ -80,6 +77,7 @@ const Auth = ({ children }) => {
   return children;
 };
 
+export default App;
 // Auth.getInitialProps = ({ req }) => {
 //   const cookies =
 // };
