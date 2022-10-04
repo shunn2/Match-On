@@ -3,17 +3,17 @@ import { useRouter } from "next/router";
 
 import styled from "@emotion/styled";
 
-import TeamMain from "../../../components/pages/myprojects/tabmenu/TabMain/Tabmain";
-import MeetingLog from "../../../components/pages/myprojects/tabmenu/MeetingLog";
-import VedioConference from "../../../components/pages/myprojects/tabmenu/VedioConference";
-import Drive from "../../../components/pages/myprojects/tabmenu/Drive";
-import Vote from "../../../components/pages/myprojects/tabmenu/Vote";
-import Notice from "../../../components/pages/myprojects/tabmenu/Notice";
-import CalendarTab from "../../../components/pages/myprojects/tabmenu/CalendarTab";
-import TeamMember from "../../../components/pages/myprojects/tabmenu/TeamMember";
+import TeamMain from "../../../src/components/pages/Myprojects/tabmenu/TabMain/Tabmain";
+import MeetingLog from "../../../src/components/pages/Myprojects/tabmenu/MeetingLog";
+import VedioConference from "../../../src/components/pages/Myprojects/tabmenu/VedioConference";
+import Drive from "../../../src/components/pages/Myprojects/tabmenu/Drive";
+import Vote from "../../../src/components/pages/Myprojects/tabmenu/Vote";
+import Notice from "../../../src/components/pages/Myprojects/tabmenu/Notice";
+import CalendarTab from "../../../src/components/pages/Myprojects/tabmenu/CalendarTab";
+import TeamMember from "../../../src/components/pages/Myprojects/tabmenu/TeamMember";
 
 import axios from "axios";
-import { API_URL } from "../../../components/api/API";
+import { API_URL } from "../../../src/api/API";
 import { useSession } from "next-auth/react";
 
 interface MemberInformation {

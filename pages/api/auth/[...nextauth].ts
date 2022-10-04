@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import { useQuery } from "react-query";
 import axios from "axios";
-import { API_URL } from "../../../components/api/API";
+import { API_URL } from "../../../src/api/API";
 
 interface User {
   data: { accessToken: string };

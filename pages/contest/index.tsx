@@ -4,16 +4,16 @@ import { NextPage } from "next";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { API_URL } from "../../components/api/API";
+import { API_URL } from "../../src/api/API";
 import {
   ContestBox,
   StudyBox,
-} from "../../components/pages/myprojects/components/BoxContainer";
-import Carousel, { SlideButton } from "../../components/src/sub/Carousel";
+} from "../../src/components/pages/Myprojects/components/BoxContainer";
+import Carousel, { SlideButton } from "../../src/components/sub/Carousel";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import qs from "qs";
-import UploadModal from "../../components/pages/Study/Modal/UploadModal";
-import ResultRow from "../../components/pages/Study/table/ResultRow";
+import UploadModal from "../../src/components/pages/Study/Modal/UploadModal";
+import ResultRow from "../../src/components/pages/Study/table/ResultRow";
 interface FavoriteContestProps {
   activityIdx: number;
   title: string;

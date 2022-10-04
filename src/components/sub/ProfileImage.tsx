@@ -13,9 +13,9 @@ import DeleteImg from "../../public/register/deleteImg.svg";
 import styled from "@emotion/styled";
 import axios from "axios";
 import { API_URL } from "../../api/API";
-import { useAppDispatch, useAppSelector } from "../../../src/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { useSession } from "next-auth/react";
-import { changeUserInfo } from "../../../src/redux/reducers/user";
+import { changeUserInfo } from "../../redux/reducers/user";
 interface ImageStyle {
   size: number[];
   mode?: string;

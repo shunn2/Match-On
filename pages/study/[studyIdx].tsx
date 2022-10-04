@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import styled from "@emotion/styled";
-import { API_URL } from "../../components/api/API";
+import { API_URL } from "../../src/api/API";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import PostContent from "../../components/pages/Study/Post/PostContent";
+import PostContent from "../../src/components/pages/Study/Post/PostContent";
 
 const StudyPostPage = styled.div`
   position: absolute;

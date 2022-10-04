@@ -3,8 +3,8 @@ import axios from "axios";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { API_URL } from "../../../components/api/API";
-import PostContent from "../../../components/pages/ClassBoard/components/PostContent";
+import { API_URL } from "../../../src/api/API";
+import PostContent from "../../../src/components/pages/ClassBoard/components/PostContent";
 
 const MyprojectPage = styled.div`
   position: absolute;

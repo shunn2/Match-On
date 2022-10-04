@@ -2,8 +2,8 @@ import { SessionProvider, signOut, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Provider } from "react-redux";
-import RefreshTokenHandler from "../components/src/sub/auth/refreshTokenHandler";
-import Layout from "../components/layouts/Layout";
+import RefreshTokenHandler from "../src/components/sub/auth/refreshTokenHandler";
+import Layout from "../src/components/layouts/Layout";
 import "../styles/globals.css";
 import { store } from "../src/redux/store";
 import { useState } from "react";
@@ -11,7 +11,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { useAppDispatch } from "../src/hooks/hooks";
 import { userLogin } from "../src/redux/reducers/user";
 import axios from "axios";
-import { API_URL } from "../components/api/API";
+import { API_URL } from "../src/api/API";
 
 export default function App({
   Component,

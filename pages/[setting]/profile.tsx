@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import { useAppSelector } from "../../src/hooks/hooks";
 import { RootState } from "../../src/redux/store";
-import ImageContainer from "../../components/src/sub/ProfileImage";
+import ImageContainer from "../../src/components/sub/ProfileImage";
 
 const SettingWrapper = styled.div`
   width: 100%;

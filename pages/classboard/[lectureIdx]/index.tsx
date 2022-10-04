@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import styled from "@emotion/styled";
-import FreeBoard from "../../../components/pages/ClassBoard/TabContents/FreeBoard";
-import InfoBoard from "../../../components/pages/ClassBoard/TabContents/InfoBoard";
-import RecruitBoard from "../../../components/pages/ClassBoard/TabContents/RecruitBoard";
+import FreeBoard from "../../../src/components/pages/ClassBoard/TabContents/FreeBoard";
+import InfoBoard from "../../../src/components/pages/ClassBoard/TabContents/InfoBoard";
+import RecruitBoard from "../../../src/components/pages/ClassBoard/TabContents/RecruitBoard";
 import axios from "axios";
-import { API_URL } from "../../../components/api/API";
+import { API_URL } from "../../../src/api/API";
 import { useSession } from "next-auth/react";
 
 const MyprojectPage = styled.div`

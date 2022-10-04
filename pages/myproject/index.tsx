@@ -4,8 +4,8 @@ import { NextPage } from "next";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { API_URL } from "../../components/api/API";
-import { ProjectBox } from "../../components/pages/myprojects/components/BoxContainer";
+import { API_URL } from "../../src/api/API";
+import { ProjectBox } from "../../src/components/pages/Myprojects/components/BoxContainer";
 
 interface teamImfo {
   teamIdx: number;
