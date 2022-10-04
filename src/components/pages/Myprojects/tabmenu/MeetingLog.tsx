@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../api/API";
 import NoteModal from "./tabComponents/Modal/NoteModal";
-import { MeetingRow } from "../components/PostRow";
+import { MeetingRow } from "../../../elements/Table/PostRow";
 
 interface NoteProps {
   noteIdx: number;

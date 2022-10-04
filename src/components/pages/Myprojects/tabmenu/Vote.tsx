@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import { API_URL } from "../../api/API";
-import { VoteRow } from "../components/PostRow";
+import { VoteRow } from "../../../elements/Table/PostRow";
 import VoteModal from "./tabComponents/Modal/VoteModal";
 
 interface Vote {

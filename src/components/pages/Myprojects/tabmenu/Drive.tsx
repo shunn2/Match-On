@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../api/API";
-import { DriveRow, MeetingRow } from "../components/PostRow";
+import { DriveRow, MeetingRow } from "../../../elements/Table/PostRow";
 import DriveModal from "./tabComponents/Modal/Drive/DriveModal";
 import FolderModal from "./tabComponents/Modal/Drive/FolderModal";
 import FolderIcom from "../../../public/myprojectSVG/Folder.svg";

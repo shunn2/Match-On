@@ -1,18 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 //signOut === 로그아웃 함수 useSession === nextauth에서 user가 로그인되어 있는 지를 알려주는 훅
-import DirectMsg from "../../sub/DirectMsg";
-import Notification from "../../sub/Notification";
+import DirectMsg from "@elements/DirectMessage/DirectMsg";
+import Notification from "@elements/Notification/Notification";
 
 import styled from "@emotion/styled";
-import UserInfo from "../../sub/UserInfo";
+import UserInfo from "../../elements/UserInfo/UserInfo";
 
 import { useAppSelector } from "../../../hooks/hooks";
 
-import MessageIcon from "/public/topbarSVG/directmsg.svg";
-import NotificationIcon from "/public/topbarSVG/notification.svg";
+import MessageIcon from "/public/components/directmsg.svg";
+import NotificationIcon from "/public/components/notification.svg";
 import { RootState } from "../../../redux/store";
-import ProfileImage from "../../sub/ProfileImage";
+import ProfileImage from "../../elements/File/ProfileImage";
 // import { getProfileImgUrl } from "../../components/sub/getProfileImg";
 
 const Top = styled.div`

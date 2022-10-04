@@ -1,10 +1,10 @@
 import React from "react";
 
-import Myproject from "/public/sidebarSVG/side_myproject.svg";
-import Classboard from "/public/sidebarSVG/side_classboard.svg";
-import Contest from "/public/sidebarSVG/side_contest.svg";
-import Study from "/public/sidebarSVG/side_study.svg";
-import Survey from "/public/sidebarSVG/side_survey.svg";
+import Myproject from "/public/sidebar/side_myproject.svg";
+import Classboard from "/public/sidebar/side_classboard.svg";
+import Contest from "/public/sidebar/side_contest.svg";
+import Study from "/public/sidebar/side_study.svg";
+import Survey from "/public/sidebar/side_survey.svg";
 
 const sidebarData = [
   {

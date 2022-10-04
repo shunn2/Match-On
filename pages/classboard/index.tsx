@@ -6,8 +6,8 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { API_URL } from "../../src/api/API";
-import { ClassBox } from "../../src/components/pages/Myprojects/components/BoxContainer";
-import Carousel, { SlideButton } from "../../src/components/sub/Carousel";
+import { ClassBox } from "../../src/components/elements/BoxContainer/BoxContainer";
+import Carousel, { SlideButton } from "../../src/components/elements/Carousel/Carousel";
 import { RootState } from "../../src/redux/store";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 

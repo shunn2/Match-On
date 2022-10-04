@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../api/API";
 import NoteModal from "./tabComponents/Modal/NoteModal";
-import { MeetingRow, NoticeRow } from "../components/PostRow";
+import { MeetingRow, NoticeRow } from "../../../elements/Table/PostRow";
 import NoticeModal from "./tabComponents/Modal/NoticeModal";
 
 interface NoticeProps {
