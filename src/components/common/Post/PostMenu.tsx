@@ -9,7 +9,7 @@ import { useAppDispatch } from "../../../hooks/hooks";
 import { commentAction } from "../../../redux/reducers/comment";
 import { useRouter } from "next/router";
 import UploadModal from "../ClassBoard/components/Modal/UploadModal";
-import PatchPostModal from "../Modal/PatchPostModal";
+import PatchPostModal from "../Modal/Patch";
 
 const MenuOption = styled.div`
   height: 2.5rem;

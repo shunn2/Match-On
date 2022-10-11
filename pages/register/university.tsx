@@ -6,7 +6,7 @@ import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import UniversitySearchBar from "../../src/components/pages/Register/SearchBar";
 import axios from "axios";
 import { API_URL } from "../../src/api/API";
-import { storage } from "../../src/components/sub/firebase/firebase";
+import { storage } from "../../src/components/common/firebase/firebase";
 import { ref, getDownloadURL, uploadBytes, deleteObject } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import ChangeImg from "../../public/register/changeImg.svg";

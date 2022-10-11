@@ -5,7 +5,7 @@ import {
   ref,
   uploadBytes,
 } from "firebase/storage";
-import { storage } from "@components/sub/firebase/firebase";
+import { storage } from "@components/common/firebase/firebase";
 import { v4 as uuidv4 } from "uuid";
 
 import styled from "@emotion/styled";

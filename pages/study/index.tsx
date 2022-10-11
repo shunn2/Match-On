@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../src/api/API";
-import { StudyBox } from "../../src/components/elements/BoxContainer/BoxContainer";
+import { StudyBox } from "../../src/components/common/BoxContainer/BoxContainer";
 import Carousel, { SlideButton } from "../../src/components/elements/Carousel/Carousel";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import qs from "qs";

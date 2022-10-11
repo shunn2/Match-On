@@ -2,18 +2,17 @@ import styled from "@emotion/styled";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import { API_URL } from "../../api/API";
-import UploadModal from "../components/Modal/UploadModal";
-import PostResultRow from "../components/PostResultRow";
+import UploadModal from "../../common/Modal/Recruit";
+import PostResultRow from "../Row/PostResultRow";
 
 interface Post {
-  lecturePostIdx: number;
+  activityPostIdx: number;
   title: string;
   body: string;
   createdAt: string;
-  writer: string;
-  profileUrl: string | null;
   hitCount: string;
   commentCount: string;
   cursor: string;
@@ -119,15 +118,20 @@ const Table = styled.div`
   }
 `;
 
-const RecruitBoard = ({ lectureIdx }) => {
+const RecruitContest = ({ lectureIdx }) => {
   const { data: session, status } = useSession();
-
+  const { contestIdx } = useRouter().query;
   const [postList, setPostList] = useState<Post[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState<boolean>(false);
   const [filter, setFilter] = useState<string>("latest");
   const [keyword, setKeyword] = useState<string>("");
-  const [params, setParams] = useState({ type: "team", sort: "latest", keyword: "", cursor: null });
+  const [params, setParams] = useState({
+    type: "team",
+    sort: "latest",
+    keyword: "",
+    cursor: null,
+  });
 
   const handleModalOpen = () => {
     setIsOpen((prev) => !prev);
@@ -144,14 +148,21 @@ const RecruitBoard = ({ lectureIdx }) => {
 
   const getPostList = async () => {
     try {
-      const params = { type: "team", sort: filter, keyword: keyword, cursor: null };
+      const params = {
+        sort: filter,
+        keyword: keyword,
+        cursor: null,
+      };
 
-      const response = await axios.get(API_URL + `lectures/${lectureIdx}/posts`, {
-        params: params,
-        headers: {
-          Authorization: `Bearer ${session.accessToken}`,
-        },
-      });
+      const response = await axios.get(
+        API_URL + `activities/${contestIdx}/posts`,
+        {
+          params: params,
+          headers: {
+            Authorization: `Bearer ${session.accessToken}`,
+          },
+        }
+      );
       const list = response.data.result;
       // setPostList((prev) => [...prev, ...list]);
       setPostList(list);
@@ -199,7 +210,10 @@ const RecruitBoard = ({ lectureIdx }) => {
       </TopSection>
       <Table>
         {postList.map((post, idx) => (
-          <Link href={`/classboard/${lectureIdx}/${post.lecturePostIdx}?tabnum=2&type=team`} key={post.lecturePostIdx}>
+          <Link
+            href={`/contest/${contestIdx}/${post.activityPostIdx}`}
+            key={post.activityPostIdx}
+          >
             <a>
               <PostResultRow
                 {...post}
@@ -207,18 +221,23 @@ const RecruitBoard = ({ lectureIdx }) => {
                 setPostList={setPostList}
                 isLastItem={postList.length - 1 === idx}
                 params={params}
-                setParams={() => setParams({ ...params, cursor: postList[postList.length - 1].cursor })}
+                setParams={() =>
+                  setParams({
+                    ...params,
+                    cursor: postList[postList.length - 1].cursor,
+                  })
+                }
               />
             </a>
           </Link>
         ))}
       </Table>
-      {isOpen && <UploadModal isOpen={isOpen} handleOpen={handleModalOpen} lectureIdx={lectureIdx} type="team" />}
+      {isOpen && <UploadModal isOpen={isOpen} handleOpen={handleModalOpen} />}
     </Container>
   );
 };
 
-export default RecruitBoard;
+export default RecruitContest;
 
 // body: "<p></p>\n"
 // commentCount: "0"

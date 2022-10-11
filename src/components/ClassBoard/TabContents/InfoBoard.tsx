@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { API_URL } from "../../api/API";
-import UploadModal from "../components/Modal/UploadModal";
+import UploadModal from "../../common/Modal/UploadModal";
 import PostResultRow from "../components/PostResultRow";
 
 interface Post {

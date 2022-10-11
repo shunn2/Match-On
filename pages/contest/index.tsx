@@ -8,7 +8,7 @@ import { API_URL } from "../../src/api/API";
 import {
   ContestBox,
   StudyBox,
-} from "../../src/components/elements/BoxContainer/BoxContainer";
+} from "../../src/components/common/BoxContainer/BoxContainer";
 import Carousel, { SlideButton } from "../../src/components/elements/Carousel/Carousel";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import qs from "qs";

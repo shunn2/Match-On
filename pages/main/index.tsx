@@ -10,7 +10,7 @@ import RecentAlarm from "../../src/components/pages/Main/RecentAlarm";
 import {
   EmptyBox,
   MainProjectBox,
-} from "../../src/components/elements/BoxContainer/BoxContainer";
+} from "../../src/components/common/BoxContainer/BoxContainer";
 import { useAppSelector } from "../../src/hooks/hooks";
 import { RootState } from "../../src/redux/store";
 
