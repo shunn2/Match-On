@@ -12,8 +12,8 @@ import {
 import Carousel, { SlideButton } from "../../src/components/elements/Carousel/Carousel";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import qs from "qs";
-import UploadModal from "../../src/components/pages/Study/Modal/UploadModal";
-import ResultRow from "../../src/components/pages/Study/table/ResultRow";
+import UploadModal from "../../src/components/pages/study/Modal/UploadModal";
+import ResultRow from "../../src/components/pages/study/table/ResultRow";
 interface FavoriteContestProps {
   activityIdx: number;
   title: string;

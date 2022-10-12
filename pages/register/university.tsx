@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FC } from "react";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
-import UniversitySearchBar from "../../src/components/pages/Register/SearchBar";
+import UniversitySearchBar from "../../src/components/pages/register/SearchBar";
 import axios from "axios";
 import { API_URL } from "../../src/api/API";
 import { storage } from "../../src/components/common/firebase/firebase";

@@ -4,9 +4,9 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../src/api/API";
-import CalendarMain from "../../src/components/pages/Main/CalendarMain";
-import FavoriteTeam from "../../src/components/pages/Main/FavoriteTeam";
-import RecentAlarm from "../../src/components/pages/Main/RecentAlarm";
+import CalendarMain from "../../src/components/pages/main/CalendarMain";
+import FavoriteTeam from "../../src/components/pages/main/FavoriteTeam";
+import RecentAlarm from "../../src/components/pages/main/RecentAlarm";
 import {
   EmptyBox,
   MainProjectBox,

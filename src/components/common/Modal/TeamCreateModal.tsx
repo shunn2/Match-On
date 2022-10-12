@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import ModalContainer from "./ModalConatiner";
 
-import Close from "../../public/componentSVG/CloseButton.svg";
+import Close from "/public/components/CloseButton.svg";
 import {
   CloseButton,
   ContentInput,
@@ -38,7 +38,7 @@ const MemberWrapper = styled.div`
 `;
 
 const TeamCreateModal = ({ isOpen, handleOpen, member, type, index }) => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const [teamName, setTeamName] = useState<string>("");
   const router = useRouter();
 

@@ -49,3 +49,15 @@ export const ContentInput = styled.input`
   :-ms-input-placeholder {
   }
 `;
+
+export const Anonymous = styled.span`
+  font-size: 0.75rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  color: #989898;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 1rem;
+`;

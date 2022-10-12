@@ -12,7 +12,7 @@ import { RootState } from "../../src/redux/store";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 
 import useIntersectionObserver from "../../src/hooks/useIntersectionObserver";
-import ResultRow from "../../src/components/pages/ClassBoard/components/ResultRow";
+import ResultRow from "../../src/components/pages/classboard/components/ResultRow";
 interface FavoriteClass {
   credit: number;
   instructor: string;
