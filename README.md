@@ -1,23 +1,14 @@
 <a href="https://www.swaicau.com/bbs/board.php?bo_table=program5&wr_id=41">프로젝트 정보</a>
 
-Organization Github: https://github.com/Match-on
-기간: 2022년 2월 23일 → 2022년 9월 28일
-사이트: https://match-on-shunn2.vercel.app/
-속성: emotion, next.js, node.js, react.js, redux, typescript
+#### Organization Github: https://github.com/Match-on
+#### 기간: 2022년 2월 23일 → 2022년 9월 28일
+#### 사이트: https://match-on-shunn2.vercel.app/
+#### 속성: emotion, next.js, node.js, react.js, redux, typescript
 
-![Untitled](Match-On%20e552e73c6ac644569bc097622f1de0a3/Untitled.png)
+![initial](https://drive.google.com/file/d/1HObTXmrXLLxIWKfQcVfoh-lye8IAI1dr/view?usp=sharing)
 
 ### [🏆 중앙대학교 SW AI 공모전 대회 최우수상 수상](https://www.swaicau.com/bbs/board.php?bo_table=program5&wr_id=41)
 
-‼️ 현재 공모전 출품 준비로 인해 github 링크는 비공개로 설정되어 있습니다.
-
-‼️ 혹시 접속하여 사용하고 싶으신 분은 아래 id / pw로 이용해보시길 바랍니다.
-
-(아직 vercel 앱 최신화는 안되어 있을 수도 있습니다.)
-
-id: admin123
-
-pw: admin**00 
 
 ### 🎨 **프로젝트 개발 배경**
 
