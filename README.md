@@ -5,7 +5,9 @@
 #### 사이트: https://match-on-shunn2.vercel.app/
 #### 속성: emotion, next.js, node.js, react.js, redux, typescript
 
-![initial](https://drive.google.com/file/d/1HObTXmrXLLxIWKfQcVfoh-lye8IAI1dr/view?usp=sharing)
+![Untitled](https://user-images.githubusercontent.com/86822777/197477767-23a4a6cc-88dc-4156-8fa7-d1b29847489d.png)
+![Untitled 1](https://user-images.githubusercontent.com/86822777/197477714-5f64c6f9-d2f8-4475-8359-5340c3b26414.png)
+
 
 ### [🏆 중앙대학교 SW AI 공모전 대회 최우수상 수상](https://www.swaicau.com/bbs/board.php?bo_table=program5&wr_id=41)
 
