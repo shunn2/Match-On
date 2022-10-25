@@ -8,12 +8,12 @@ import { API_URL } from "../../src/api/API";
 import {
   ContestBox,
   StudyBox,
-} from "../../src/components/common/BoxContainer/BoxContainer";
+} from "../../src/components/common/BoxContainer/elements/BoxContainer";
 import Carousel, { SlideButton } from "../../src/components/elements/Carousel/Carousel";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 import qs from "qs";
-import UploadModal from "../../src/components/pages/study/Modal/UploadModal";
-import ResultRow from "../../src/components/pages/study/table/ResultRow";
+import UploadModal from "../../src/components/pageElements/study/Modal/UploadModal";
+import ResultRow from "../../src/components/pageElements/study/table/ResultRow";
 interface FavoriteContestProps {
   activityIdx: number;
   title: string;

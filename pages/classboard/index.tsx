@@ -6,13 +6,13 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { API_URL } from "../../src/api/API";
-import { ClassBox } from "../../src/components/common/BoxContainer/BoxContainer";
+import { ClassBox } from "../../src/components/common/BoxContainer/elements/BoxContainer";
 import Carousel, { SlideButton } from "../../src/components/elements/Carousel/Carousel";
 import { RootState } from "../../src/redux/store";
 import CustomCheck from "../../public/componentSVG/register/CustomCheck.svg";
 
 import useIntersectionObserver from "../../src/hooks/useIntersectionObserver";
-import ResultRow from "../../src/components/pages/classboard/components/ResultRow";
+import ResultRow from "../../src/components/pageElements/classboard/components/ResultRow";
 interface FavoriteClass {
   credit: number;
   instructor: string;

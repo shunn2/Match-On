@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { Editor, EditorProps } from "react-draft-wysiwyg";
+import { EditorProps } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import styled from "@emotion/styled";
 import { EditorState, convertToRaw, ContentState } from "draft-js";

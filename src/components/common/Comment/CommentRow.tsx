@@ -77,7 +77,7 @@ export const ParentRow = (props) => {
   const { data: session, status } = useSession();
   const dispatch = useAppDispatch();
 
-  const onClickReply = (parentIdx) => {
+  const onClickReply = (parentIdx: number) => {
     dispatch(commentAction({ state: "reply", idx: parentIdx }));
     props.setParentIdx(parentIdx);
     document.getElementById("input_comment").focus();
@@ -89,14 +89,24 @@ export const ParentRow = (props) => {
         <Profile>
           <div className="img" />
           <div className="nickname">
-            {props.isWriter === "1" ? <span className="writer">글쓴이</span> : <span>{props.name}</span>}
+            {props.isWriter === "1" ? (
+              <span className="writer">글쓴이</span>
+            ) : (
+              <span>{props.name}</span>
+            )}
           </div>
         </Profile>
         <Comment>{props.comment}</Comment>
       </LeftSide>
       <RightSide>
-        {props.isMe === "1" ? <CommentMenu commentIdx={props.commentIdx} getPost={props.getPost} /> : <div />}
-        <AppendChild onClick={() => onClickReply(props.commentIdx)}>답글 달기</AppendChild>
+        {props.isMe === "1" ? (
+          <CommentMenu commentIdx={props.commentIdx} getPost={props.getPost} />
+        ) : (
+          <div />
+        )}
+        <AppendChild onClick={() => onClickReply(props.commentIdx)}>
+          답글 달기
+        </AppendChild>
       </RightSide>
     </Content>
   );
@@ -109,13 +119,21 @@ export const ChildRow = (props) => {
         <Profile>
           <div className="img" />
           <div className="nickname">
-            {props.isWriter === "1" ? <span className="writer">글쓴이</span> : <span>{props.name}</span>}
+            {props.isWriter === "1" ? (
+              <span className="writer">글쓴이</span>
+            ) : (
+              <span>{props.name}</span>
+            )}
           </div>
         </Profile>
         <Comment>{props.comment}</Comment>
       </LeftSide>
       <RightSide>
-        {props.isMe === "1" ? <CommentMenu commentIdx={props.commentIdx} getPost={props.getPost} /> : <div />}
+        {props.isMe === "1" ? (
+          <CommentMenu commentIdx={props.commentIdx} getPost={props.getPost} />
+        ) : (
+          <div />
+        )}
       </RightSide>
     </ChildContent>
   );

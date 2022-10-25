@@ -93,7 +93,7 @@ const CommentMenu = (props) => {
         API_URL + `${deleteUrl}${props.commentIdx}`,
         {
           headers: {
-            Authorization: `Bearer ${session.accessToken}`,
+            Authorization: `Bearer ${session?.accessToken}`,
           },
         }
       );

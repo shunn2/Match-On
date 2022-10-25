@@ -7,10 +7,10 @@ import axios from "axios";
 import { API_URL } from "../../../src/api/API";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import VotePost from "../../../src/components/pages/myprojects/tabmenu/TabContents/VotePost";
-import MeetPost from "../../../src/components/pages/myprojects/tabmenu/TabContents/MeetPost";
-import NoticePost from "../../../src/components/pages/myprojects/tabmenu/TabContents/NoticePost";
-import DrivePost from "../../../src/components/pages/myprojects/tabmenu/TabContents/DrivePost";
+import VotePost from "../../../src/components/pageElements/myprojects/tabmenu/TabContents/VotePost";
+import MeetPost from "../../../src/components/pageElements/myprojects/tabmenu/TabContents/MeetPost";
+import NoticePost from "../../../src/components/pageElements/myprojects/tabmenu/TabContents/NoticePost";
+import DrivePost from "../../../src/components/pageElements/myprojects/tabmenu/TabContents/DrivePost";
 
 interface MemberInformation {
   memberIdx: number;

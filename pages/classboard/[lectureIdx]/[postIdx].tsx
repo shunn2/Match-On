@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../../src/api/API";
-import PostContent from "../../../src/components/pages/classboard/components/PostContent";
+import PostContent from "../../../src/components/pageElements/classboard/components/PostContent";
 
 const MyprojectPage = styled.div`
   position: absolute;
