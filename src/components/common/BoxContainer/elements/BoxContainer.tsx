@@ -1,19 +1,19 @@
 import styled from "@emotion/styled";
 import React, { useEffect, useRef, useState } from "react";
-import { differenceInCalendarDays, format, parseISO } from "date-fns";
+// import { differenceInCalendarDays, format, parseISO } from "date-fns";
 
-import TeamMember from "/public/components/TeamMember.svg";
-import Favorite from "/public/components/Favorite.svg";
-import Comment from "/public/components/comment.svg";
-import Comment2 from "/public/components/Chat_Circle.svg";
-import Seen from "/public/components/seen.svg";
-import Seen2 from "/public/components/Show.svg";
-import { API_URL } from "src/api/API";
-import axios from "axios";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-import ImageContainer from "@elements/File/ImageContainer";
-import useIntersectionObserver from "src/hooks/useIntersectionObserver";
+// import TeamMember from "/public/components/TeamMember.svg";
+// import Favorite from "/public/components/Favorite.svg";
+// import Comment from "/public/components/comment.svg";
+// import Comment2 from "/public/components/Chat_Circle.svg";
+// import Seen from "/public/components/seen.svg";
+// import Seen2 from "/public/components/Show.svg";
+// import { API_URL } from "src/api/API";
+// import axios from "axios";
+// import { useSession } from "next-auth/react";
+// import { useRouter } from "next/router";
+// import ImageContainer from "@elements/File/ImageContainer";
+// import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 
 export const Container = styled.div`
   width: 16.8rem;
