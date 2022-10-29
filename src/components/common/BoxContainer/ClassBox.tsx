@@ -3,7 +3,13 @@ import axios from "axios";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { ContentsBox } from "./elements/BoxContainer";
+import {
+  Board,
+  ContentsBox,
+  Describe,
+  Subject,
+  Title,
+} from "./elements/BoxContainer";
 
 const ClassBox = (props) => {
   const router = useRouter();
@@ -21,7 +27,7 @@ const ClassBox = (props) => {
       .then((res) => console.log(res));
   };
 
-  const boardRouting = (tab) => {
+  const boardRouting = (tab: number) => {
     router.push(`/classboard/${props.lectureIdx}?tabnum=${tab}`);
   };
   return (

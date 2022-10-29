@@ -2,6 +2,7 @@ import { API_URL } from "@api/API";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
+import { ContentsBox, Tag, TagWrapper } from "./elements/BoxContainer";
 
 export const StudyBox = (props) => {
   const [favorite, setFavorite] = useState<boolean>(true);

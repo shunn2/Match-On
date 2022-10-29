@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { Container, Identity, TodoList } from "./elements/BoxContainer";
 
 const MemberBox = (props) => {
   return (

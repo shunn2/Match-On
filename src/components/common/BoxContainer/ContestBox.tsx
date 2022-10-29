@@ -4,6 +4,8 @@ import { differenceInCalendarDays, parseISO } from "date-fns";
 import { useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 import useIntersectionObserver from "src/hooks/useIntersectionObserver";
+import ImageContainer from "../File/ImageContainer";
+import { ContestContentsBox, HeartIcon } from "./elements/BoxContainer";
 import { ContestBoxProps } from "./interface/BoxInterface";
 
 export const ContestBox = (props: ContestBoxProps) => {

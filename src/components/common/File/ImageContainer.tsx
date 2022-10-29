@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface FileProps {
   fileName: string;
-  url: string;
+  url: string | null;
   size?: number[];
 }
 
