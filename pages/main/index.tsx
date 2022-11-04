@@ -11,7 +11,7 @@ import {
   EmptyBox,
   MainProjectBox,
 } from "../../src/components/common/BoxContainer/elements/BoxContainer";
-import { useAppSelector } from "../../src/hooks/hooks";
+import { useAppSelector } from "../../src/hooks/ReduxHooks";
 import { RootState } from "../../src/redux/store";
 
 interface Noti {

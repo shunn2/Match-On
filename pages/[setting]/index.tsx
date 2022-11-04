@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import ImageContainer from "../../src/components/elements/File/ProfileImage";
-import { useAppSelector } from "../../src/hooks/hooks";
+import { useAppSelector } from "../../src/hooks/ReduxHooks";
 import { RootState } from "../../src/redux/store";
 
 const SettingWrapper = styled.div`

@@ -11,6 +11,8 @@ import {
   Title,
 } from "./elements/BoxContainer";
 
+import Favorite from "public/components/Favorite.svg";
+
 const ClassBox = (props) => {
   const router = useRouter();
   const { data: session } = useSession();

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import Menu from "../../public/componentSVG/Menu.svg";
-import { useAppDispatch } from "../../../hooks/hooks";
+import { useAppDispatch } from "../../../hooks/ReduxHooks";
 import { commentAction } from "../../../redux/reducers/comment";
 import { API_URL } from "../../../api/API";
 import CommentMenu from "./CommentMenu";

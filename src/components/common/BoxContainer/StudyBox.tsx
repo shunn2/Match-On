@@ -3,12 +3,15 @@ import axios from "axios";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { ContentsBox, Tag, TagWrapper } from "./elements/BoxContainer";
+import Favorite from "public/components/Favorite.svg";
+import Seen from "public/components/Seen.svg";
+import Comment from "public/components/Comment.svg";
 
 export const StudyBox = (props) => {
   const [favorite, setFavorite] = useState<boolean>(true);
   const { data: session } = useSession();
 
-  const appendFavorite = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const appendFavorite = async (e: React.MouseEvent<HTMLDivElement>) => {
     await e.preventDefault();
     try {
       const res = await axios.post(
@@ -25,7 +28,7 @@ export const StudyBox = (props) => {
       console.log(err);
     }
   };
-  const deleteFavorite = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const deleteFavorite = async (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     try {
       const res = await axios.delete(

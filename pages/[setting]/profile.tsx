@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Image from "next/image";
-import { useAppSelector } from "../../src/hooks/hooks";
+import { useAppSelector } from "../../src/hooks/ReduxHooks";
 import { RootState } from "../../src/redux/store";
 import ImageContainer from "../../src/components/elements/File/ProfileImage";
 

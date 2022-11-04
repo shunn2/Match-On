@@ -8,6 +8,9 @@ import ImageContainer from "../File/ImageContainer";
 import { ContestContentsBox, HeartIcon } from "./elements/BoxContainer";
 import { ContestBoxProps } from "./interface/BoxInterface";
 
+import Comment from "public/components/Comment.svg";
+import Seen from "public/components/Seen.svg";
+
 export const ContestBox = (props: ContestBoxProps) => {
   const { data: session } = useSession();
   const [favorite, setFavorite] = useState(Boolean(props.favorite));
@@ -15,7 +18,7 @@ export const ContestBox = (props: ContestBoxProps) => {
   const entry = useIntersectionObserver(ref, {});
   const isIntersecting = !!entry?.isIntersecting;
 
-  const appendFavorite = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const appendFavorite = async (e: React.MouseEvent<HTMLDivElement>) => {
     await e.preventDefault();
     try {
       const res = await axios.post(
@@ -52,7 +55,7 @@ export const ContestBox = (props: ContestBoxProps) => {
         url={props.imageUrl}
         size={[250, 320]}
       />
-      <HeartIcon isMe={favorite} onClick={appendFavorite}>
+      <HeartIcon isMe={favorite} onClick={(e) => appendFavorite(e)}>
         {parseInt(props.favoriteCount) > 99 ? "+99" : props.favoriteCount}
       </HeartIcon>
       <div className="contest_title">{props.title}</div>
@@ -64,11 +67,11 @@ export const ContestBox = (props: ContestBoxProps) => {
         </div>
         <div style={{ display: "flex" }}>
           <div className="svg_wrapper">
-            <Comment2 />
+            <Comment />
             {props.hitCount}
           </div>
           <div className="svg_wrapper">
-            <Seen2 />
+            <Seen />
             {props.commentCount}
           </div>
         </div>

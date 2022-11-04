@@ -11,7 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 import styled from "@emotion/styled";
 import axios from "axios";
 import { API_URL } from "src/api/API";
-import { useAppDispatch, useAppSelector } from "src/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "src/hooks/ReduxHooks";
 import { useSession } from "next-auth/react";
 import { changeUserInfo } from "src/redux/reducers/user";
 

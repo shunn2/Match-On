@@ -2,17 +2,21 @@ import { API_URL } from "@api/API";
 import axios from "axios";
 import { differenceInCalendarDays, format, parseISO } from "date-fns";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 import { useState } from "react";
-import { Describe, ProjectContainer, Subject, Title } from "./elements/BoxContainer";
+import {
+  Describe,
+  ProjectContainer,
+  Subject,
+  Title,
+} from "./elements/BoxContainer";
+import Favorite from "public/components/Favorite.svg";
+import TeamMember from "@components/pageElements/myprojects/TeamMember";
 
 const memberColor = ["#ffe8ea", "#f2c7f9", "#c7c7c7", "#9be5e5"];
 
 export const ProjectBox = (props) => {
   const [favorite, setFavorite] = useState(props.favorite);
   const { data: session } = useSession();
-  const router = useRouter();
-  console.log(props);
 
   const diffDays = () => {
     const entire = differenceInCalendarDays(
@@ -25,7 +29,7 @@ export const ProjectBox = (props) => {
     );
     return today / entire;
   };
-  const appendFavorite = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const appendFavorite = async (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     setFavorite(1);
     axios
@@ -40,7 +44,7 @@ export const ProjectBox = (props) => {
       )
       .then((res) => console.log("append", res));
   };
-  const deleteFavorite = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const deleteFavorite = async (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     setFavorite(0);
     axios

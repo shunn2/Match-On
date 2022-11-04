@@ -7,7 +7,7 @@ import Notification from "@elements/Notification/Notification";
 import styled from "@emotion/styled";
 import UserInfo from "../../elements/UserInfo/UserInfo";
 
-import { useAppSelector } from "../../../hooks/hooks";
+import { useAppSelector } from "../../../hooks/ReduxHooks";
 
 import MessageIcon from "/public/components/directmsg.svg";
 import NotificationIcon from "/public/components/notification.svg";
@@ -40,7 +40,6 @@ const Container = styled.div`
 `;
 
 const Topbar: React.FC = () => {
-  const { data: session, status } = useSession();
   const user = useAppSelector((state: RootState) => state.user.value);
 
   const userInfo = useAppSelector((state) => state.user.value);

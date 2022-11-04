@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-
 import styled from "@emotion/styled";
-import Menu from "../../public/componentSVG/Menu.svg";
 import axios from "axios";
-import { API_URL } from "../../../api/API";
+import { API_URL } from "@api/API";
 import { useSession } from "next-auth/react";
-import { useAppDispatch } from "../../../hooks/hooks";
-import { commentAction } from "../../../redux/reducers/comment";
+import { useAppDispatch } from "src/hooks/ReduxHooks";
+import { commentAction } from "src/redux/reducers/comment";
 import { useRouter } from "next/router";
+import Menu from "public/componentSVG/Menu.svg";
 
 const MenuOption = styled.div`
   height: 2.5rem;
@@ -58,7 +57,7 @@ const tabDeleteUrl = {
 
 const CommentMenu = (props) => {
   //props로 index랑 함수 네임은 없음.
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const router = useRouter();
   const pathname = router.pathname.split("/")[1];
   const { tabNum } = router.query;

@@ -1,7 +1,7 @@
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import Slider from "react-slick";
 import styled from "@emotion/styled";
 
 import LeftArrow from "../../public/componentSVG/Arrow/Left_Arrow.svg";

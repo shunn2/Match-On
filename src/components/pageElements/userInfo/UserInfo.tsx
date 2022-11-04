@@ -5,7 +5,7 @@ import React from "react";
 
 import Setting from "/public/setting/Setting.svg";
 import LogOut from "/public/components/LogOut.svg";
-import { useAppSelector } from "../../../hooks/hooks";
+import { useAppSelector } from "../../../hooks/ReduxHooks";
 import { RootState } from "../../../redux/store";
 import ProfileImage from "../../common/File/ProfileImage";
 interface UserInformation {

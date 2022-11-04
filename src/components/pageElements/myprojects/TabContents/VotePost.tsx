@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
-import { useAppDispatch, useAppSelector } from "../../../../hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../../../hooks/ReduxHooks";
 import MenuIcon from "/public/componentSVG/Menu.svg";
 import { unCommentAction } from "../../../../redux/reducers/comment";
 import { RootState } from "../../../../redux/store";

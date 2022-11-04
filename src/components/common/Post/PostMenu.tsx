@@ -5,7 +5,7 @@ import Menu from "../../public/componentSVG/Menu.svg";
 import axios from "axios";
 import { API_URL } from "../../../api/API";
 import { useSession } from "next-auth/react";
-import { useAppDispatch } from "../../../hooks/hooks";
+import { useAppDispatch } from "../../../hooks/ReduxHooks";
 import { commentAction } from "../../../redux/reducers/comment";
 import { useRouter } from "next/router";
 import UploadModal from "../ClassBoard/components/Modal/UploadModal";
